@@ -12,11 +12,14 @@
   text-decoration: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   background-color: var(--bg);
   color: #fff;
-  min-height: 3000px;
 }
 
 /* Navbar */
@@ -144,19 +147,22 @@ body {
 
 /* About Section */
 .about,
-.menu h2 {
+.menu h2,
+.contact h2 {
   padding: 7rem 7% 1.4rem;
 }
 
 .about h2,
-.menu h2 {
+.menu h2,
+.contact h2 {
   text-align: center;
   font-size: 2.2rem;
   margin-bottom: 3rem;
 }
 
 .about h2 span,
-.menu h2 span {
+.menu h2 span,
+.contact h2 span {
   color: var(--primary);
 }
 
@@ -222,11 +228,117 @@ body {
 .menu .row .menu-card .menu-card-title {
   margin: 1rem auto 0.3rem;
 }
-
 /* End Menu Section */
 
-/* Media Queris */
+/* Contact Section */
+.contact h2 {
+  margin-bottom: 1rem;
+}
 
+.contact p {
+  text-align: center;
+  max-width: 40rem;
+  margin: auto;
+  font-weight: 100;
+  line-height: 1.6;
+}
+
+.contact .row {
+  display: flex;
+  margin-top: 2rem;
+  background-color: #222;
+  margin: 2rem 2rem;
+}
+
+.contact .row .map {
+  flex: 1 1 45rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+.contact .row form {
+  flex: 1 1 45rem;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.contact .row form .input-group {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  background-color: var(--bg);
+  border: 1px solid #eee;
+  padding-left: 2rem;
+}
+
+.contact .row form .input-group input {
+  width: 100%;
+  padding: 2rem;
+  font-size: 1.7rem;
+  background: none;
+  color: #fff;
+}
+
+.contact .row form button {
+  margin-top: 3rem;
+  padding: 1rem 3rem;
+  display: inline-block;
+  font-size: 1.5rem;
+  color: #fff;
+  background: var(--primary);
+  cursor: pointer;
+  border-radius: 0.5rem;
+}
+/* End Contact Section */
+
+/* Footer */
+footer {
+  background-color: var(--primary);
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 3rem;
+}
+
+footer .socials {
+  padding: 1rem 0;
+}
+
+footer .socials a {
+  color: #fff;
+  margin: 1rem;
+}
+
+footer .socials a:hover {
+  color: var(--bg);
+}
+
+footer .links {
+  margin-bottom: 1.2rem;
+}
+
+footer .links a {
+  color: #fff;
+  padding: 0.7rem 1rem;
+}
+
+footer .links a:hover {
+  color: var(--bg);
+}
+
+footer .credit {
+  margin-bottom: 3rem;
+}
+
+footer .credit a {
+  color: var(--bg);
+}
+
+footer .credit a:hover {
+  font-weight: 1000;
+}
+/* End Footer */
+
+/* Media Queris */
 /* Laptop */
 @media (max-width: 1366px) {
   html {
@@ -287,6 +399,22 @@ body {
 
   .about .row .content {
     padding: 0;
+  }
+
+  .menu p {
+    font-size: 1.2rem;
+  }
+
+  .contact .row {
+    flex-wrap: wrap;
+  }
+
+  .contact .row .map {
+    height: 30rem;
+  }
+
+  .contact .row form {
+    padding-top: 0;
   }
 }
 /* end Tablet */
